@@ -9,7 +9,8 @@
     state:          { label: "State criminal", color: "#a855f7" },
     civil:          { label: "Civil", color: "#06b6d4" },
     immigration:    { label: "Immigration & rights", color: "#f472b6" },
-    military:       { label: "Military & war", color: "#84cc16" }
+    military:       { label: "Military & war", color: "#84cc16" },
+    allegations:    { label: "Allegations", color: "#fb7185" }
   };
 
   var STATUSES = {
@@ -39,24 +40,48 @@
     "campaign-finance": "Campaign finance",
     "alien-enemies": "Alien Enemies Act",
     "abrego": "Abrego Garcia",
-    "birthright": "Birthright order",
-    "guard": "Guard deployments",
-    "detention": "ICE detention deaths",
-    "castro": "Minneapolis ICE shooting",
+    "birthright": "Birthright",
+    "guard": "Guard",
+    "detention": "ICE deaths",
+    "castro": "Minneapolis shooting",
     "boat-strikes": "Boat strikes",
     "iran-war": "Iran war powers",
-    "iran-school": "Minab school strike",
+    "iran-school": "Minab school",
     "ny-hush": "NY hush money",
     "georgia": "Georgia RICO",
     "fake-electors": "Fake electors",
     "carroll": "Carroll",
     "ny-civil-fraud": "NY civil fraud",
     "trump-university": "Trump University",
-    "trump-foundation": "Trump Foundation"
+    "trump-foundation": "Trump Foundation",
+    "acc-ivana": "Ivana deposition",
+    "acc-harth": "Jill Harth",
+    "acc-katie-johnson": "Katie Johnson suits",
+    "acc-zervos": "Summer Zervos",
+    "acc-alva-johnson": "Alva Johnson",
+    "acc-leeds": "Jessica Leeds",
+    "acc-anderson": "Kristin Anderson",
+    "acc-williams": "Stacey Williams",
+    "acc-keul": "Beatrice Keul",
+    "acc-boyne": "Boyne",
+    "acc-heller": "Heller",
+    "acc-mcdowell": "McDowell",
+    "acc-dorris": "Amy Dorris",
+    "acc-virginia": "Karena Virginia",
+    "acc-karen-johnson": "Karen Johnson",
+    "acc-mcgillivray": "Mindy McGillivray",
+    "acc-crooks": "Rachel Crooks",
+    "acc-stoynoff": "Natasha Stoynoff",
+    "acc-huddy": "Juliet Huddy",
+    "acc-drake": "Jessica Drake",
+    "acc-laaksonen": "Ninni Laaksonen",
+    "acc-searles": "Cassandra Searles",
+    "acc-miss-teen-usa": "Miss Teen USA rooms",
+    "epstein-files": "Epstein files"
   };
 
-  var ORDER_CATS = ["constitutional", "federal", "state", "civil", "immigration", "military"];
-  var state = { cat: "all", status: "all", q: "", sort: "date" };
+  var ORDER_CATS = ["constitutional", "federal", "state", "civil", "immigration", "military", "allegations"];
+  var state = { cat: "all", status: "all", q: "", sort: "date", person: "trump" };
 
   function esc(s) {
     return String(s).replace(/[&<>"']/g, function (c) {
@@ -144,19 +169,31 @@
   }
 
   /* ---------- TIMELINE ---------- */
+  /* Label box for a timeline dot: to the right of the dot, or to the left when it would run off the chart. */
+  function labelBounds(cx, r, w, side) {
+    if (side === "right") return { l: cx + r + 5, r: cx + r + 5 + w };
+    return { l: cx - r - 5 - w, r: cx - r - 5 };
+  }
+
+  /* True when a dot and its label would collide with an already placed dot and label. */
+  function collides(p, cx, cy, r, b) {
+    if (Math.abs(p.x - cx) < p.r + r + 3 && Math.abs(p.y - cy) < p.r + r + 3) return true;
+    return Math.abs(p.y - cy) < 14 && b.l < p.bounds.r + 4 && p.bounds.l < b.r + 4;
+  }
+
   function renderTimeline() {
     var svg = $("timelineSvg");
     var W = 1000, padL = 170, padR = 30;
-    var t0 = Date.parse("2012-01-01"), t1 = Date.parse("2027-12-31");
+    var t0 = Date.parse("1980-01-01"), t1 = Date.parse("2027-12-31");
     function X(d) { return padL + (Date.parse(d) - t0) / (t1 - t0) * (W - padL - padR); }
-    var lanes = { constitutional: 60, federal: 140, state: 220, civil: 300, immigration: 380, military: 460 };
-    var AXIS_Y = 482;
+    var lanes = { constitutional: 100, federal: 200, state: 300, civil: 400, immigration: 500, military: 600, allegations: 700 };
+    var AXIS_Y = 800;
 
     var s = "";
     s += '<rect x="' + (X("2025-01-20")) + '" y="22" width="' + (W - padR - X("2025-01-20")) + '" height="' + (AXIS_Y - 22) + '" class="era-band"/>';
     s += '<text x="' + (X("2025-01-20") + 6) + '" y="38" class="era-label">2nd term</text>';
 
-    for (var y = 2013; y <= 2027; y++) {
+    for (var y = 1980; y <= 2027; y += 5) {
       var x = X(y + "-01-01");
       s += '<line x1="' + x + '" x2="' + x + '" y1="48" y2="' + (AXIS_Y - 4) + '" class="year-tick"/>';
       s += '<text x="' + x + '" y="' + (AXIS_Y + 16) + '" text-anchor="middle" class="year-label">' + y + '</text>';
@@ -164,7 +201,7 @@
 
     ORDER_CATS.forEach(function (c, i) {
       var yy = lanes[c];
-      if (i % 2 === 0) s += '<rect x="0" y="' + (yy - 40) + '" width="' + W + '" height="80" class="lane-band"/>';
+      if (i % 2 === 0) s += '<rect x="0" y="' + (yy - 50) + '" width="' + W + '" height="100" class="lane-band"/>';
       s += '<line x1="' + padL + '" x2="' + (W - padR) + '" y1="' + yy + '" y2="' + yy + '" stroke="#222838"/>';
       s += '<text x="16" y="' + (yy + 5) + '" class="lane-label" style="fill:' + CATEGORIES[c].color + '">' + esc(CATEGORIES[c].label) + '</text>';
     });
@@ -175,27 +212,33 @@
 
     // Place dots lane by lane, nudging vertically to avoid overlaps.
     var placed = [];
-    var sorted = D.cases.slice().sort(function (a, b) { return Date.parse(a.date) - Date.parse(b.date); });
+    var sorted = scopedCases().slice().sort(function (a, b) { return Date.parse(a.date) - Date.parse(b.date); });
     sorted.forEach(function (c) {
       var cx = X(c.date);
       var base = lanes[c.category];
-      var chosen = base;
-      var candidates = [0, -26, 26, -52, 52];
-      for (var i = 0; i < candidates.length; i++) {
-        var cy = base + candidates[i];
-        var clash = placed.some(function (p) {
-          return Math.abs(p.x - cx) < 110 && Math.abs(p.y - cy) < 26;
-        });
-        if (!clash) { chosen = cy; break; }
-      }
-      placed.push({ x: cx, y: chosen });
       var color = CATEGORIES[c.category].color;
       var r = 6 + c.stakes * 1.8;
+      var label = SHORT[c.id] || c.title;
+      var labelW = label.length * 6.1;
+      var candidates = [0, -26, 26, -52, 52, -78, 78];
+      var chosen = base, chosenSide = "right", chosenBounds = null;
+      var fewest = Infinity;
+      candidates.forEach(function (off) {
+        ["right", "left"].forEach(function (side) {
+          var cy = base + off;
+          var b = labelBounds(cx, r, labelW, side);
+          var n = placed.filter(function (p) { return collides(p, cx, cy, r, b); }).length;
+          if (b.r > W - 6 || b.l < padL) n += 1; // keep labels inside the chart
+          if (n < fewest) { fewest = n; chosen = cy; chosenSide = side; chosenBounds = b; }
+        });
+      });
+      placed.push({ x: cx, y: chosen, r: r, bounds: chosenBounds });
       s += '<g class="tl-g">' +
         '<line class="tl-stem" x1="' + cx + '" x2="' + cx + '" y1="' + base + '" y2="' + chosen + '"/>' +
         '<circle class="tl-dot" data-id="' + c.id + '" tabindex="0" role="button" aria-label="' + esc(c.title) + '" ' +
         'cx="' + cx + '" cy="' + chosen + '" r="' + r + '" fill="' + color + '" style="color:' + color + '"/>' +
-        '<text class="tl-label" x="' + (cx + r + 5) + '" y="' + (chosen + 4) + '">' + esc(SHORT[c.id] || c.title) + '</text>' +
+        '<text class="tl-label' + (fewest === 0 ? "" : " tl-hidden") + '" x="' + (chosenSide === "right" ? cx + r + 5 : cx - r - 5) + '" y="' + (chosen + 4) + '"' +
+        (chosenSide === "left" ? ' text-anchor="end"' : '') + '>' + esc(label) + '</text>' +
         '</g>';
     });
 
@@ -261,8 +304,59 @@
     return hay.indexOf(state.q) !== -1;
   }
 
+  /* ---------- PEOPLE (top bar) ---------- */
+  var PEOPLE_DROPDOWN_AT = 6;
+
+  function activePerson() {
+    return D.people.find(function (p) { return p.id === state.person; }) || D.people[0];
+  }
+
+  function scopedCases() {
+    var p = activePerson();
+    if (!p.caseIds) return D.cases;
+    return D.cases.filter(function (c) { return p.caseIds.indexOf(c.id) !== -1; });
+  }
+
+  function renderPeople() {
+    var p = activePerson();
+    var bar = $("peopleBar");
+    if (D.people.length > PEOPLE_DROPDOWN_AT) {
+      bar.innerHTML = '<label class="people-label" for="peopleSelect">Official</label>' +
+        '<select id="peopleSelect" class="people-select">' + D.people.map(function (x) {
+          return '<option value="' + esc(x.id) + '"' + (x.id === p.id ? " selected" : "") + '>' + esc(x.name) + '</option>';
+        }).join("") + '</select>';
+    } else {
+      bar.innerHTML = '<span class="people-label">Accountability</span>' +
+        '<div class="people-tabs" role="tablist">' + D.people.map(function (x) {
+          var on = x.id === p.id;
+          return '<button type="button" role="tab" class="people-tab' + (on ? " on" : "") + '" aria-selected="' + on + '" data-person="' + esc(x.id) + '">' + esc(x.name) + '</button>';
+        }).join("") + '</div>';
+    }
+
+    var n = scopedCases().length;
+    var sources = (p.sources || []).map(function (s) {
+      return '<li><a href="' + esc(s.url) + '" target="_blank" rel="noopener">' + esc(s.label) + '</a></li>';
+    }).join("");
+    $("personPanel").innerHTML =
+      '<div class="person-head">' +
+        '<div><p class="eyebrow">' + esc(p.role) + '</p><h2>' + esc(p.name) + '</h2></div>' +
+        '<div class="person-count"><span class="num">' + n + '</span><span class="muted small">matters</span></div>' +
+      '</div>' +
+      '<p class="person-blurb">' + esc(p.blurb) + '</p>' +
+      (p.note ? '<p class="muted small">' + esc(p.note) + '</p>' : "") +
+      (sources ? '<ul class="person-sources">' + sources + '</ul>' : "");
+  }
+
+  function setPerson(id) {
+    if (state.person === id) return;
+    state.person = id;
+    renderPeople();
+    renderTimeline();
+    renderGrid();
+  }
+
   function filteredCases() {
-    var list = D.cases.filter(function (c) {
+    var list = scopedCases().filter(function (c) {
       return (state.cat === "all" || c.category === state.cat) &&
              (state.status === "all" || c.status === state.status) &&
              matchesQuery(c);
@@ -312,7 +406,7 @@
 
   function renderGrid() {
     var list = filteredCases();
-    $("resultCount").textContent = "Showing " + list.length + " of " + D.cases.length + " matters.";
+    $("resultCount").textContent = "Showing " + list.length + " of " + scopedCases().length + " matters.";
     $("grid").innerHTML = list.length
       ? list.map(cardHTML).join("")
       : '<div class="empty">No matters match these filters.</div>';
@@ -401,6 +495,13 @@
 
   /* ---------- EVENTS ---------- */
   function bind() {
+    $("peopleBar").addEventListener("click", function (e) {
+      var btn = e.target.closest("[data-person]");
+      if (btn) setPerson(btn.dataset.person);
+    });
+    $("peopleBar").addEventListener("change", function (e) {
+      if (e.target.id === "peopleSelect") setPerson(e.target.value);
+    });
     $("search").addEventListener("input", function (e) {
       state.q = e.target.value.toLowerCase().trim();
       renderGrid();
@@ -467,6 +568,7 @@
     renderTimeline();
     renderChips();
     renderGrid();
+    renderPeople();
     renderPathways();
     bind();
   }

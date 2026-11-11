@@ -1030,6 +1030,782 @@ window.TRUMP_DATA = {
       sources: [
         { label: "Wikipedia: Donald J. Trump Foundation", url: "https://en.wikipedia.org/wiki/Donald_J._Trump_Foundation" }
       ]
+    },
+
+    /* ---------------- SEXUAL MISCONDUCT ALLEGATIONS (no criminal charge) ---------------- */
+    {
+      id: "acc-ivana",
+      title: "Ivana Trump: 1990 divorce deposition and 1993 book",
+      category: "allegations",
+      date: "1989-01-01",
+      dateLabel: "1989–1990",
+      track: "inquiry",
+      reached: 0,
+      ended: true,
+      status: "no-action",
+      stakes: 3,
+      summary: "In a 1990 divorce deposition, Ivana Trump said Trump ripped out hair from her scalp. A 1993 book reported that she had called a 1989 incident a “rape,” which she later said she did not mean literally.",
+      charges: [
+        "Violent assault and hair-pulling (1989, per deposition)",
+        "Sexual assault described as “rape” (1993 book; Ivana later disavowed the literal meaning)"
+      ],
+      current: "No lawsuit or criminal complaint is pending on this account. In 2015 Ivana said the story was “totally without merit.”",
+      defense: [
+        "Trump called the deposition claim “obviously false” (1990).",
+        "Ivana said in 2015 that the story was “totally without merit.”"
+      ],
+      handling: [
+        "The divorce settlement had a confidentiality clause. In 1992 Trump sued Ivana over her book and won a gag order."
+      ],
+      convictionPath: [
+        "No criminal case or civil claim on this account.",
+        "A divorce deposition and a book are not legal findings."
+      ],
+      sources: [
+        { label: "Wikipedia: Ivana Trump (1989)", url: "https://en.wikipedia.org/wiki/Donald_Trump_sexual_misconduct_allegations#Ivana_Trump_(1989)" }
+      ]
+    },
+    {
+      id: "acc-harth",
+      title: "Jill Harth: 1992–1993 Mar-a-Lago incident and 1997 lawsuit",
+      category: "allegations",
+      date: "1992-12-01",
+      dateLabel: "1992–1997",
+      track: "inquiry",
+      reached: 2,
+      ended: true,
+      status: "dismissed",
+      stakes: 3,
+      summary: "Businesswoman Jill Harth said Trump groped her at a 1992 dinner and pushed her against a wall in a Mar-a-Lago bedroom in January 1993. Her 1997 lawsuit was withdrawn.",
+      charges: [
+        "Attempted groping at a 1992 dinner (alleged)",
+        "Pinning against a wall and forcible touching at Mar-a-Lago (alleged, 1993)"
+      ],
+      current: "The lawsuit was withdrawn. Harth says she still stands by her account.",
+      defense: [
+        "Trump called her account “false, malicious and libelous” (2016)."
+      ],
+      handling: [
+        "Filed in 1997. Harth settled the breach-of-contract claim and forfeited the sexual harassment claim."
+      ],
+      convictionPath: [
+        "The claim was withdrawn, so there is no legal finding.",
+        "A criminal case would require a prosecutor to act on decades-old allegations."
+      ],
+      sources: [
+        { label: "Wikipedia: Jill Harth (1992)", url: "https://en.wikipedia.org/wiki/Donald_Trump_sexual_misconduct_allegations#Jill_Harth_(1992)" }
+      ]
+    },
+    {
+      id: "acc-katie-johnson",
+      title: "“Katie Johnson” / “Jane Doe”: 1994 Epstein-party suits (2016)",
+      category: "allegations",
+      date: "1994-01-01",
+      dateLabel: "1994 (suits 2016)",
+      track: "inquiry",
+      reached: 2,
+      ended: true,
+      status: "dismissed",
+      stakes: 4,
+      summary: "An anonymous woman using the name “Katie Johnson,” later “Jane Doe,” sued Trump and Jeffrey Epstein in 2016. She alleged she was raped at 13 at Epstein parties in 1994. The suits were dismissed or withdrawn.",
+      charges: [
+        "Rape of a 13-year-old at Epstein’s Manhattan residence (1994, alleged)",
+        "Threats after the assault (alleged, in a sworn declaration)"
+      ],
+      current: "The California suit was dismissed in May 2016, and the New York suit was withdrawn in November 2016. The plaintiff was anonymous in the sources reviewed.",
+      defense: [
+        "Trump denied the allegations.",
+        "A Guardian investigation said the suits appeared to be organized by Norm Lubow. In 2024 Lubow confirmed to Snopes that he helped file the suit under a false name. Snopes said this does not disprove that the plaintiff is a real person."
+      ],
+      handling: [
+        "Refiled in New York in 2016, then withdrawn two days after a planned press conference was canceled."
+      ],
+      convictionPath: [
+        "Dismissed and withdrawn, so there is no legal finding.",
+        "Would face statute-of-limitations problems and would need evidence beyond the anonymous filing."
+      ],
+      sources: [
+        { label: "Wikipedia: Katie Johnson / Jane Doe (1994)", url: "https://en.wikipedia.org/wiki/Donald_Trump_sexual_misconduct_allegations#Katie_Johnson/Jane_Doe_(1994)" }
+      ]
+    },
+    {
+      id: "acc-zervos",
+      title: "Summer Zervos: 2007 Beverly Hills Hotel meeting and defamation suit",
+      category: "allegations",
+      date: "2007-12-01",
+      dateLabel: "Dec 2007",
+      track: "inquiry",
+      reached: 2,
+      ended: true,
+      status: "dismissed",
+      stakes: 4,
+      summary: "Former Apprentice contestant Summer Zervos said Trump kissed her open-mouthed, touched her breasts, and pressed his genitals against her at a 2007 meeting about a job. After Trump called her a liar, she sued for defamation and later withdrew.",
+      charges: [
+        "Forcible kissing and touching of breasts (2007, alleged)",
+        "Genital contact (2007, alleged)"
+      ],
+      current: "Zervos withdrew her defamation case in November 2021. Her attorneys said Trump did not pay her to withdraw.",
+      defense: [
+        "Trump said she lied, which led to her 2017 defamation suit."
+      ],
+      handling: [
+        "Defamation suit filed January 2017. In March 2021 New York’s highest court ruled that Trump could not use presidential immunity to block it. Zervos withdrew in November 2021."
+      ],
+      convictionPath: [
+        "Withdrawn, so there is no legal finding.",
+        "The 2021 appeals ruling addressed presidential immunity, not whether the alleged conduct happened."
+      ],
+      sources: [
+        { label: "Wikipedia: Summer Zervos (2007)", url: "https://en.wikipedia.org/wiki/Donald_Trump_sexual_misconduct_allegations#Summer_Zervos_(2007)" }
+      ]
+    },
+    {
+      id: "acc-alva-johnson",
+      title: "Alva Johnson: 2016 campaign rally kiss and 2019 lawsuit",
+      category: "allegations",
+      date: "2016-08-01",
+      dateLabel: "Aug 2016",
+      track: "inquiry",
+      reached: 2,
+      ended: true,
+      status: "dismissed",
+      stakes: 2,
+      summary: "Alva Johnson, who worked on Trump’s 2016 campaign, said he forcibly kissed her at a Florida rally in August 2016. She sued in 2019 and dropped the suit that September.",
+      charges: [
+        "Forcible kiss at a Florida rally (August 2016, alleged)"
+      ],
+      current: "Johnson dropped the suit in September 2019.",
+      defense: [
+        "Press secretary Sarah Huckabee Sanders called the lawsuit “absurd on its face.”",
+        "Two people Johnson named as witnesses, including then-Florida attorney general Pam Bondi, said they did not see the kiss."
+      ],
+      handling: [
+        "The judge dismissed the complaint in June 2019 with leave to amend. Johnson declined to amend and ended the suit, citing threats to her safety."
+      ],
+      convictionPath: [
+        "Dropped, so there is no legal finding.",
+        "A battery claim would need a new filing; the original suit did not reach the merits."
+      ],
+      sources: [
+        { label: "Wikipedia: Alva Johnson (2016)", url: "https://en.wikipedia.org/wiki/Donald_Trump_sexual_misconduct_allegations#Alva_Johnson_(2016)" }
+      ]
+    },
+    {
+      id: "acc-leeds",
+      title: "Jessica Leeds: groping on a first-class flight (1980s)",
+      category: "allegations",
+      date: "1980-06-01",
+      dateLabel: "Early 1980s",
+      track: "inquiry",
+      reached: 0,
+      ended: true,
+      status: "no-action",
+      stakes: 3,
+      summary: "Businesswoman Jessica Leeds said Trump groped her on a flight from the Midwest in the early 1980s. The New York Times printed her account in October 2016.",
+      charges: [
+        "Groping, including breasts, and an attempt to touch under her skirt (alleged)"
+      ],
+      current: "No lawsuit or criminal case in the sources reviewed.",
+      defense: [
+        "Trump has denied all allegations of sexual misconduct."
+      ],
+      handling: [
+        "Her account was published by The New York Times in October 2016."
+      ],
+      convictionPath: [
+        "No criminal charge. A decades-old incident may be past criminal statutes of limitations.",
+        "Civil claims depend on state law."
+      ],
+      sources: [
+        { label: "Wikipedia: Jessica Leeds (1980s)", url: "https://en.wikipedia.org/wiki/Donald_Trump_sexual_misconduct_allegations#Jessica_Leeds_(1980s)" }
+      ]
+    },
+    {
+      id: "acc-anderson",
+      title: "Kristin Anderson: groping at a Manhattan nightclub (1990s)",
+      category: "allegations",
+      date: "1992-01-01",
+      dateLabel: "Early 1990s",
+      track: "inquiry",
+      reached: 0,
+      ended: true,
+      status: "no-action",
+      stakes: 2,
+      summary: "Aspiring model Kristin Anderson said Trump groped her beneath her skirt at a Manhattan nightclub in the early 1990s. The Washington Post reported it in October 2016.",
+      charges: [
+        "Groping beneath her skirt (alleged)"
+      ],
+      current: "No lawsuit or criminal case in the sources reviewed.",
+      defense: [
+        "Trump has denied all allegations of sexual misconduct."
+      ],
+      handling: [
+        "Reported by The Washington Post in October 2016."
+      ],
+      convictionPath: [
+        "No criminal charge. A decades-old incident may be past criminal statutes of limitations."
+      ],
+      sources: [
+        { label: "Wikipedia: Kristin Anderson (1990s)", url: "https://en.wikipedia.org/wiki/Donald_Trump_sexual_misconduct_allegations#Kristin_Anderson_(1990s)" }
+      ]
+    },
+    {
+      id: "acc-williams",
+      title: "Stacey Williams: groping with Epstein present (1993)",
+      category: "allegations",
+      date: "1993-01-01",
+      dateLabel: "1993 (reported 2024)",
+      track: "inquiry",
+      reached: 0,
+      ended: true,
+      status: "no-action",
+      stakes: 2,
+      summary: "Former Sports Illustrated model Stacey Williams said in October 2024 that Trump groped her in 1993 while Jeffrey Epstein watched. Axios counted her as the 27th woman to accuse Trump of sexual misconduct.",
+      charges: [
+        "Groping, with Epstein present (1993, alleged)"
+      ],
+      current: "No lawsuit or criminal case in the sources reviewed.",
+      defense: [
+        "The Trump campaign strongly denied the claims (Axios, 2024)."
+      ],
+      handling: [
+        "Account first reported in October 2024."
+      ],
+      convictionPath: [
+        "No criminal charge. A decades-old incident may be past criminal statutes of limitations."
+      ],
+      sources: [
+        { label: "Wikipedia: Stacey Williams (1993)", url: "https://en.wikipedia.org/wiki/Donald_Trump_sexual_misconduct_allegations#Stacey_Williams_(1993)" },
+        { label: "Axios: Stacey Williams 27th woman to accuse him (Oct 28, 2024)", url: "https://www.axios.com/2024/10/28/trump-sexual-misconduct-allegations-women" }
+      ]
+    },
+    {
+      id: "acc-keul",
+      title: "Beatrice Keul: alleged rape in a Plaza Hotel suite (1993)",
+      category: "allegations",
+      date: "1993-06-01",
+      dateLabel: "1993 (reported 2024; 2026 report)",
+      track: "inquiry",
+      reached: 0,
+      ended: true,
+      status: "no-action",
+      stakes: 4,
+      summary: "Swiss model Beatrice Keul told the Daily Mail in October 2024 that Trump groped her in his suite at New York’s Plaza Hotel in 1993. A report released by House Judiciary Committee Democrats in October 2026 quotes her describing the assault as rape.",
+      charges: [
+        "Groping in a Plaza Hotel suite (1993, alleged)",
+        "Rape, as described in the October 2026 Judiciary Democrats’ report (alleged)"
+      ],
+      current: "The report was released by committee Democrats, not adopted as a committee finding. No criminal case was found in the sources reviewed.",
+      defense: [
+        "Trump has denied all allegations of sexual misconduct."
+      ],
+      handling: [
+        "No lawsuit or criminal case in the sources reviewed."
+      ],
+      convictionPath: [
+        "A rape allegation would be a serious crime, but this incident is more than thirty years old. Prosecutors would need to open a case.",
+        "The Judiciary report is not a legal finding."
+      ],
+      sources: [
+        { label: "Wikipedia: Beatrice Keul (1993)", url: "https://en.wikipedia.org/wiki/Donald_Trump_sexual_misconduct_allegations#Beatrice_Keul_(1993)" }
+      ]
+    },
+    {
+      id: "acc-boyne",
+      title: "Lisa Boyne: dinner with models (1996)",
+      category: "allegations",
+      date: "1996-01-01",
+      dateLabel: "1996",
+      track: "inquiry",
+      reached: 0,
+      ended: true,
+      status: "no-action",
+      stakes: 2,
+      summary: "Model Lisa Boyne said Trump made models walk across a dinner table and looked under their skirts at a dinner in 1996. The Huffington Post reported it in October 2016.",
+      charges: [
+        "Lewd conduct toward models at a dinner (alleged)"
+      ],
+      current: "No lawsuit or criminal case in the sources reviewed.",
+      defense: [
+        "Sonja Morgan, who organized the dinner, told HuffPost that she did not recall lewd behavior by Trump."
+      ],
+      handling: [
+        "Reported by The Huffington Post in October 2016."
+      ],
+      convictionPath: [
+        "No criminal charge. A decades-old incident may be past criminal statutes of limitations."
+      ],
+      sources: [
+        { label: "Wikipedia: Lisa Boyne (1996)", url: "https://en.wikipedia.org/wiki/Donald_Trump_sexual_misconduct_allegations#Lisa_Boyne_(1996)" }
+      ]
+    },
+    {
+      id: "acc-heller",
+      title: "Cathy Heller: grabbed and kissed at Mar-a-Lago (1997)",
+      category: "allegations",
+      date: "1997-05-01",
+      dateLabel: "May 1997",
+      track: "inquiry",
+      reached: 0,
+      ended: true,
+      status: "no-action",
+      stakes: 2,
+      summary: "Cathy Heller said Trump grabbed her and kissed her on the side of the mouth at a Mother’s Day brunch at Mar-a-Lago in 1997. Her husband and children corroborated her account.",
+      charges: [
+        "Grabbing and an unwanted kiss (alleged)"
+      ],
+      current: "No lawsuit or criminal case in the sources reviewed.",
+      defense: [
+        "Trump campaign spokesperson Jason Miller called her account “false” and “politically motivated.”"
+      ],
+      handling: [
+        "Reported by The Guardian in October 2016."
+      ],
+      convictionPath: [
+        "No criminal charge. A decades-old incident may be past criminal statutes of limitations."
+      ],
+      sources: [
+        { label: "Wikipedia: Cathy Heller (1997)", url: "https://en.wikipedia.org/wiki/Donald_Trump_sexual_misconduct_allegations#Cathy_Heller_(1997)" }
+      ]
+    },
+    {
+      id: "acc-mcdowell",
+      title: "Temple Taggart McDowell: unwanted kisses in Trump’s office (1997)",
+      category: "allegations",
+      date: "1997-01-01",
+      dateLabel: "1997",
+      track: "inquiry",
+      reached: 0,
+      ended: true,
+      status: "no-action",
+      stakes: 2,
+      summary: "Temple Taggart McDowell, Miss Utah USA 1997, told The New York Times in 2016 that Trump kissed her on the lips when they met and again in his office, with a chaperone present.",
+      charges: [
+        "Unwanted kisses and embraces (alleged, 1997)"
+      ],
+      current: "No lawsuit or criminal case in the sources reviewed.",
+      defense: [
+        "Trump said he did not know her and denied the claims.",
+        "Trump told The New York Times he is “reluctant to kiss strangers on the lips.”"
+      ],
+      handling: [
+        "Account published by The New York Times in May 2016."
+      ],
+      convictionPath: [
+        "No criminal charge. A decades-old incident may be past criminal statutes of limitations."
+      ],
+      sources: [
+        { label: "Wikipedia: Temple Taggart McDowell (1997)", url: "https://en.wikipedia.org/wiki/Donald_Trump_sexual_misconduct_allegations#Temple_Taggart_McDowell_(1997)" }
+      ]
+    },
+    {
+      id: "acc-dorris",
+      title: "Amy Dorris: forcible kissing and groping at the U.S. Open (1997)",
+      category: "allegations",
+      date: "1997-09-01",
+      dateLabel: "Sep 1997 (reported 2020)",
+      track: "inquiry",
+      reached: 0,
+      ended: true,
+      status: "no-action",
+      stakes: 3,
+      summary: "Former model Amy Dorris said in September 2020 that Trump groped and forcibly kissed her at the 1997 U.S. Open. The Guardian confirmed that she told her mother and a friend right after.",
+      charges: [
+        "Forcible kissing and groping (alleged, 1997)"
+      ],
+      current: "No lawsuit or criminal case in the sources reviewed.",
+      defense: [
+        "Trump denied the allegation through his lawyers."
+      ],
+      handling: [
+        "Account published in September 2020."
+      ],
+      convictionPath: [
+        "No criminal charge. A decades-old incident may be past criminal statutes of limitations."
+      ],
+      sources: [
+        { label: "Wikipedia: Amy Dorris (1997)", url: "https://en.wikipedia.org/wiki/Donald_Trump_sexual_misconduct_allegations#Amy_Dorris_(1997)" }
+      ]
+    },
+    {
+      id: "acc-virginia",
+      title: "Karena Virginia: grabbed arm and touched breast (1998)",
+      category: "allegations",
+      date: "1998-09-01",
+      dateLabel: "1998 (reported 2016)",
+      track: "inquiry",
+      reached: 0,
+      ended: true,
+      status: "no-action",
+      stakes: 2,
+      summary: "At an October 2016 press conference with Gloria Allred, yoga instructor Karena Virginia said that in 1998 Trump grabbed her arm and touched her breast after the U.S. Open in Queens.",
+      charges: [
+        "Grabbing her arm and touching her breast (alleged, 1998)"
+      ],
+      current: "No lawsuit or criminal case in the sources reviewed.",
+      defense: [
+        "Trump campaign spokesperson Jessica Ditto called Allred “discredited” and described the claim as a Clinton campaign smear."
+      ],
+      handling: [
+        "Account presented at a press conference in October 2016."
+      ],
+      convictionPath: [
+        "No criminal charge. A decades-old incident may be past criminal statutes of limitations."
+      ],
+      sources: [
+        { label: "Wikipedia: Karena Virginia (1998)", url: "https://en.wikipedia.org/wiki/Donald_Trump_sexual_misconduct_allegations#Karena_Virginia_(1998)" }
+      ]
+    },
+    {
+      id: "acc-karen-johnson",
+      title: "Karen Johnson: New Year’s Eve at Mar-a-Lago (early 2000s)",
+      category: "allegations",
+      date: "2001-01-01",
+      dateLabel: "Early 2000s (reported 2019)",
+      track: "inquiry",
+      reached: 0,
+      ended: true,
+      status: "no-action",
+      stakes: 3,
+      summary: "In the 2019 book All the President’s Women, Karen Johnson said Trump grabbed her genitals, pulled her behind a tapestry, and forcibly kissed her at a New Year’s Eve party at Mar-a-Lago.",
+      charges: [
+        "Grabbing and forcible kissing at Mar-a-Lago (alleged, early 2000s)"
+      ],
+      current: "No lawsuit or criminal case in the sources reviewed.",
+      defense: [
+        "Trump has denied all allegations of sexual misconduct."
+      ],
+      handling: [
+        "Account published in a book. Johnson told a friend about it years before Trump ran for president, according to the book."
+      ],
+      convictionPath: [
+        "No criminal charge. A decades-old incident may be past criminal statutes of limitations."
+      ],
+      sources: [
+        { label: "Wikipedia: Karen Johnson (early 2000s)", url: "https://en.wikipedia.org/wiki/Donald_Trump_sexual_misconduct_allegations#Karen_Johnson_(early_2000s)" }
+      ]
+    },
+    {
+      id: "acc-mcgillivray",
+      title: "Mindy McGillivray: groped at Mar-a-Lago (2003)",
+      category: "allegations",
+      date: "2003-01-01",
+      dateLabel: "Jan 2003 (reported 2016)",
+      track: "inquiry",
+      reached: 0,
+      ended: true,
+      status: "no-action",
+      stakes: 2,
+      summary: "Mindy McGillivray said Trump groped her at Mar-a-Lago in January 2003, when she was 23. Her friend Ken Davidoff said she told him right after. Davidoff’s brother Darryl disputed her account.",
+      charges: [
+        "Groping at Mar-a-Lago (alleged, 2003)"
+      ],
+      current: "No lawsuit or criminal case in the sources reviewed.",
+      defense: [
+        "Press secretary Hope Hicks said the allegations lacked “any merit or veracity.”"
+      ],
+      handling: [
+        "Account published by The Palm Beach Post in October 2016."
+      ],
+      convictionPath: [
+        "No criminal charge. She said she never reported it to authorities."
+      ],
+      sources: [
+        { label: "Wikipedia: Mindy McGillivray (2003)", url: "https://en.wikipedia.org/wiki/Donald_Trump_sexual_misconduct_allegations#Mindy_McGillivray_(2003)" }
+      ]
+    },
+    {
+      id: "acc-crooks",
+      title: "Rachel Crooks: kissed in a Trump Tower elevator (2005)",
+      category: "allegations",
+      date: "2005-01-01",
+      dateLabel: "2005 (reported 2016)",
+      track: "inquiry",
+      reached: 0,
+      ended: true,
+      status: "no-action",
+      stakes: 2,
+      summary: "Rachel Crooks, then a 22-year-old receptionist at Bayrock Group in Trump Tower, said Trump kissed her cheeks and then her mouth after a handshake in an elevator in 2005.",
+      charges: [
+        "Unwanted kissing (alleged, 2005)"
+      ],
+      current: "No lawsuit or criminal case in the sources reviewed.",
+      defense: [
+        "Trump disputed the claims on Twitter: “Who would do this in a public space with live security cameras running?”"
+      ],
+      handling: [
+        "Published by The New York Times in October 2016."
+      ],
+      convictionPath: [
+        "No criminal charge. A decades-old incident may be past criminal statutes of limitations."
+      ],
+      sources: [
+        { label: "Wikipedia: Rachel Crooks (2005)", url: "https://en.wikipedia.org/wiki/Donald_Trump_sexual_misconduct_allegations#Rachel_Crooks_(2005)" }
+      ]
+    },
+    {
+      id: "acc-stoynoff",
+      title: "Natasha Stoynoff: pinned against a wall at Mar-a-Lago (2005)",
+      category: "allegations",
+      date: "2005-12-01",
+      dateLabel: "Dec 2005 (reported 2016)",
+      track: "inquiry",
+      reached: 0,
+      ended: true,
+      status: "no-action",
+      stakes: 3,
+      summary: "People magazine writer Natasha Stoynoff said Trump pushed her against a wall and forced his tongue into her mouth during a December 2005 Mar-a-Lago tour, while she was reporting on the Trumps. She said she told six people at the time.",
+      charges: [
+        "Forcible kissing while pinned against a wall (alleged, 2005)"
+      ],
+      current: "No lawsuit or criminal case in the sources reviewed.",
+      defense: [
+        "Trump tweeted in October 2016 that it had not happened.",
+        "Melania Trump’s lawyer denied parts of Stoynoff’s account of a later encounter.",
+        "Trump’s former Mar-a-Lago butler denied the incident."
+      ],
+      handling: [
+        "People published six witnesses who said she told them about it at the time (October 2016)."
+      ],
+      convictionPath: [
+        "No criminal charge. A decades-old incident may be past criminal statutes of limitations."
+      ],
+      sources: [
+        { label: "Wikipedia: Natasha Stoynoff (2005)", url: "https://en.wikipedia.org/wiki/Donald_Trump_sexual_misconduct_allegations#Natasha_Stoynoff_(2005)" }
+      ]
+    },
+    {
+      id: "acc-huddy",
+      title: "Juliet Huddy: kissed in a Trump Tower elevator (2005 or 2006)",
+      category: "allegations",
+      date: "2005-06-01",
+      dateLabel: "2005 or 2006 (reported 2017)",
+      track: "inquiry",
+      reached: 0,
+      ended: true,
+      status: "no-action",
+      stakes: 1,
+      summary: "Reporter Juliet Huddy said in December 2017 that Trump kissed her on the lips in a Trump Tower elevator with his security guard present. She said he never tried anything after that.",
+      charges: [
+        "Unwanted kiss on the lips (alleged, 2005 or 2006)"
+      ],
+      current: "No lawsuit or criminal case in the sources reviewed.",
+      defense: [
+        "No specific response in the sources reviewed."
+      ],
+      handling: [
+        "Account published in December 2017."
+      ],
+      convictionPath: [
+        "No criminal charge. Huddy said she did not feel threatened and that he never tried anything after that."
+      ],
+      sources: [
+        { label: "Wikipedia: Juliet Huddy (2005 or 2006)", url: "https://en.wikipedia.org/wiki/Donald_Trump_sexual_misconduct_allegations#Juliet_Huddy_(2005_or_2006)" }
+      ]
+    },
+    {
+      id: "acc-drake",
+      title: "Jessica Drake: forcible kissing in a hotel suite (2006)",
+      category: "allegations",
+      date: "2006-07-01",
+      dateLabel: "2006 (reported 2016)",
+      track: "inquiry",
+      reached: 0,
+      ended: true,
+      status: "no-action",
+      stakes: 3,
+      summary: "Adult film actress Jessica Drake said at an October 2016 press conference with Gloria Allred that Trump grabbed her and two friends in a hug and forcibly kissed each of them at a 2006 hotel suite at a Lake Tahoe charity golf tournament. She said his associates later offered her $10,000 to join him.",
+      charges: [
+        "Forcible hugging and kissing (alleged, 2006)",
+        "Offer of $10,000 to join him in the suite (alleged)"
+      ],
+      current: "No lawsuit or criminal case in the sources reviewed.",
+      defense: [
+        "The campaign said her story was “false and ridiculous” and that Trump did not know her.",
+        "Trump said: “Oh, I’m sure she’s never been grabbed before.”"
+      ],
+      handling: [
+        "Account presented at a press conference in October 2016."
+      ],
+      convictionPath: [
+        "No criminal charge. A decades-old incident may be past criminal statutes of limitations."
+      ],
+      sources: [
+        { label: "Wikipedia: Jessica Drake (2006)", url: "https://en.wikipedia.org/wiki/Donald_Trump_sexual_misconduct_allegations#Jessica_Drake_(2006)" }
+      ]
+    },
+    {
+      id: "acc-laaksonen",
+      title: "Ninni Laaksonen: grabbed before a TV taping (2006)",
+      category: "allegations",
+      date: "2006-07-26",
+      dateLabel: "Jul 26, 2006 (reported 2016)",
+      track: "inquiry",
+      reached: 0,
+      ended: true,
+      status: "no-action",
+      stakes: 2,
+      summary: "Miss Finland 2006 Ninni Laaksonen said Trump grabbed her buttocks before they appeared together on the Late Show with David Letterman. The Finnish tabloid Ilta-Sanomat published her account in October 2016.",
+      charges: [
+        "Grabbing her buttocks (alleged, 2006)"
+      ],
+      current: "No lawsuit or criminal case in the sources reviewed.",
+      defense: [
+        "No specific response in the sources reviewed."
+      ],
+      handling: [
+        "Account published by Ilta-Sanomat in October 2016."
+      ],
+      convictionPath: [
+        "No criminal charge. A decades-old incident may be past criminal statutes of limitations."
+      ],
+      sources: [
+        { label: "Wikipedia: Ninni Laaksonen (2006)", url: "https://en.wikipedia.org/wiki/Donald_Trump_sexual_misconduct_allegations#Ninni_Laaksonen_(2006)" }
+      ]
+    },
+    {
+      id: "acc-searles",
+      title: "Cassandra Searles: groping at the Miss USA pageant (2013)",
+      category: "allegations",
+      date: "2013-01-01",
+      dateLabel: "2013 (reported 2016)",
+      track: "inquiry",
+      reached: 0,
+      ended: true,
+      status: "no-action",
+      stakes: 2,
+      summary: "Cassandra Searles, Miss Washington USA 2013, said Trump repeatedly groped her buttocks at the Miss USA pageant and asked her to come to his hotel room. She wrote about it in 2016.",
+      charges: [
+        "Repeated groping of her buttocks (alleged, 2013)"
+      ],
+      current: "No lawsuit or criminal case in the sources reviewed.",
+      defense: [
+        "Trump and his campaign have not specifically responded to Searles’s allegations."
+      ],
+      handling: [
+        "Reported by Rolling Stone and NPR in October 2016."
+      ],
+      convictionPath: [
+        "No criminal charge. A decades-old incident may be past criminal statutes of limitations."
+      ],
+      sources: [
+        { label: "Wikipedia: Cassandra Searles (2013)", url: "https://en.wikipedia.org/wiki/Donald_Trump_sexual_misconduct_allegations#Cassandra_Searles_(2013)" }
+      ]
+    },
+    {
+      id: "acc-miss-teen-usa",
+      title: "Miss Teen USA dressing rooms (1997): five contestants",
+      category: "allegations",
+      date: "1997-01-01",
+      dateLabel: "1997",
+      track: "inquiry",
+      reached: 0,
+      ended: true,
+      status: "no-action",
+      stakes: 1,
+      summary: "Five former Miss Teen USA contestants said Trump walked into a dressing room in 1997 while contestants were undressed. In a 2005 radio interview, Trump said that as the pageant owner he could “get away with things like that.”",
+      charges: [
+        "Entering a dressing room while contestants were undressed (1997, alleged)"
+      ],
+      current: "No lawsuit or criminal case in the sources reviewed. Eleven contestants said they did not see Trump enter the room, though some said he may have entered while they were elsewhere.",
+      defense: [
+        "Trump said in a 2005 interview that he was checking on the contestants as the owner of the pageant."
+      ],
+      handling: [
+        "Accounts reported in 2016."
+      ],
+      convictionPath: [
+        "No criminal charge. The incidents are about two decades old."
+      ],
+      sources: [
+        { label: "Wikipedia: Pageant dressing room visits", url: "https://en.wikipedia.org/wiki/Donald_Trump_sexual_misconduct_allegations#Miss_Teen_USA_contestants_(1997)" }
+      ]
+    },
+    {
+      id: "epstein-files",
+      title: "Epstein files: unverified FBI tips naming Trump (2026 release)",
+      category: "allegations",
+      date: "2026-01-30",
+      dateLabel: "Jan 30, 2026",
+      track: "inquiry",
+      reached: 1,
+      ended: true,
+      status: "no-action",
+      stakes: 4,
+      summary: "On January 30, 2026, the Justice Department released about 3 million pages of Epstein-related files. Trump is mentioned more than 1,000 times. The files include unverified FBI tips alleging sexual misconduct by Trump, some involving girls as young as 13 or 14. The Justice Department said these claims are unfounded and false.",
+      charges: [
+        "Unverified tips alleging sexual misconduct and abuse, including of minors (not proven)",
+        "Attendance at Epstein-linked parties (alleged in unverified tips)"
+      ],
+      current: "No criminal charge or legal finding connects Trump to Epstein’s crimes. Some FBI records remain redacted or unreleased, according to reporting.",
+      defense: [
+        "The Justice Department said the claims are “unfounded and false” and were submitted shortly before the 2020 election.",
+        "Trump says he cut ties with Epstein in the early 2000s because he thought Epstein was “a creep.”",
+        "Being mentioned in the files is not a sign of wrongdoing, according to NPR and ABC News."
+      ],
+      handling: [
+        "The files were released under the Epstein Files Transparency Act. In the sources reviewed, the FBI had not deemed the tips credible enough to investigate."
+      ],
+      convictionPath: [
+        "No open criminal case against Trump on these claims.",
+        "Unverified tips are not evidence of a crime. Any case would need evidence beyond the released tips."
+      ],
+      sources: [
+        { label: "CNN: What 3 million new documents tell us about Trump’s ties to Epstein (Jan 31, 2026)", url: "https://www.cnn.com/2026/01/31/politics/new-documents-trump-epstein" },
+        { label: "NPR: DOJ releases last tranche of Epstein files (Jan 30, 2026)", url: "https://www.npr.org/2026/01/30/nx-s1-5693904/epstein-files-doj-trump" },
+        { label: "NBC News: Key takeaways from the Epstein files", url: "https://www.nbcnews.com/politics/justice-department/epstein-files-key-takeaways-trump-musk-rcna256713" },
+        { label: "Wikipedia: Epstein Files section", url: "https://en.wikipedia.org/wiki/Donald_Trump_sexual_misconduct_allegations#Epstein_Files" }
+      ]
+    }
+  ],
+
+  /* caseIds: null means all matters. Links reflect documented roles or reported portfolios, not findings of personal wrongdoing. */
+  people: [
+    {
+      id: "trump",
+      name: "Donald J. Trump",
+      role: "President (second term)",
+      caseIds: null,
+      blurb: "Every matter in this docket names Trump, directly or through the cases against him. Trump denies wrongdoing in all of them.",
+      sources: []
+    },
+    {
+      id: "hegseth",
+      name: "Pete Hegseth",
+      role: "Secretary of Defense",
+      caseIds: ["boat-strikes", "iran-war"],
+      blurb: "Named here for the Caribbean and Pacific boat strikes and the Iran war. Hegseth says he left the room before the second Sept. 2, 2025 strike was ordered, and that he “would have made the same call.” Congressional committees have opened inquiries, and a House impeachment resolution was expected to get a vote in November 2026. No criminal charge against Hegseth is listed in these matters.",
+      note: "Boat strikes and the Iran war are matters for the Pentagon and Congress. Only Congress can impeach an official.",
+      sources: [
+        { label: "NBC News: Hegseth says he “would have made the same call” on second Sept. 2 strike", url: "https://www.nbcnews.com/politics/national-security/hegseth-says-would-have-made-same-call-second-sept-2-boat-strike-rcna247795" },
+        { label: "NBC News: House and Senate committees launch inquiries into second strike", url: "https://www.nbcnews.com/politics/national-security/house-senate-launch-inquiries-reported-second-strike-alleged-drug-boat-rcna246496" },
+        { label: "Reuters: Lawmakers review Pentagon order on Caribbean attacks (Dec 4, 2025)", url: "https://www.reuters.com/world/us/lawmakers-have-reviewed-summary-pentagon-order-caribbean-attacks-sources-say-2025-12-04/" },
+        { label: "YouGov/Economist: Congress should impeach Trump and Hegseth (Nov 2026)", url: "https://yougov.com/en-us/articles/55936-equal-shares-want-congress-to-impeach-donald-trump-and-pete-hegseth" }
+      ]
+    },
+    {
+      id: "patel",
+      name: "Kash Patel",
+      role: "FBI Director",
+      caseIds: ["epstein-files"],
+      blurb: "Named here for the Epstein files. Patel was involved in locating, reviewing, and possibly redacting FBI records on Epstein, according to testimony that House Oversight Democrats described. Democrats asked to subpoena him. Patel says the administration released “everything we legally and lawfully could.”",
+      sources: [
+        { label: "Axios: Epstein files omit Bondi, Blanche and Patel records, watchdog says (Feb 6, 2026)", url: "https://www.axios.com/2026/02/06/epstein-bondi-patel-records-withheld" },
+        { label: "WFLA: Democrats push to subpoena Blanche and Patel on Epstein files", url: "https://www.wfla.com/hill-politics/oversight-democrats-push-comer-to-subpoena-blanche-patel-in-epstein-files-probe/" },
+        { label: "The Independent: Patel says White House followed the law on Epstein files (Feb 4, 2026)", url: "https://www.independent.co.uk/news/world/americas/us-politics/kash-patel-epstein-files-deadline-b2913996.html" }
+      ]
+    },
+    {
+      id: "miller",
+      name: "Stephen Miller",
+      role: "White House chief of staff (named Nov 2026)",
+      caseIds: ["alien-enemies", "birthright", "guard", "detention"],
+      blurb: "Named here for immigration and deployment matters. Miller has been the White House homeland security adviser and deputy chief of staff for policy, and NPR reported in 2024 that he was expected to lead writing and implementing the immigration agenda. That is his reported portfolio, not a finding that he personally directed each action in these matters. No criminal charge against Miller is listed.",
+      sources: [
+        { label: "White House: Trump names Stephen Miller 33rd chief of staff (Nov 2026)", url: "https://www.whitehouse.gov/releases/2026/11/president-trump-names-stephen-miller-as-33rd-white-house-chief-of-staff/" },
+        { label: "NPR: Trump names immigration hardliner Stephen Miller deputy chief of staff (Nov 2024)", url: "https://www.npr.org/2024/11/11/g-s1-33741/trump-stephen-miller-deputy-chief-of-staff-immigration-policy-deportations" },
+        { label: "NBC News: Stephen Miller’s power extends far beyond immigration", url: "https://www.nbcnews.com/politics/white-house/stephen-miller-trump-white-house-immigration-woke-colleges-dc-rcna259413" }
+      ]
     }
   ],
 

@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <nav id="peopleBar" class="people-bar" aria-label="Officials"></nav>
 
   <header class="hero">
     <div class="orb orb-a"></div>
@@ -33,6 +34,8 @@
 
   <main>
 
+    <section id="personPanel" class="panel person-panel"></section>
+
     <section id="overview" class="panel">
       <div id="stats" class="stats"></div>
 
@@ -58,7 +61,7 @@
       <h2>Timeline</h2>
       <p class="muted">Each dot is a matter. Bigger dots mean higher stakes. Click a dot for details. The shaded band is Trump’s second term.</p>
       <div class="timeline-wrap" id="timelineWrap">
-        <svg id="timelineSvg" viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Timeline of matters"></svg>
+        <svg id="timelineSvg" viewBox="0 0 1000 830" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Timeline of matters"></svg>
         <div id="tooltip" class="tooltip" role="tooltip"></div>
       </div>
     </section>

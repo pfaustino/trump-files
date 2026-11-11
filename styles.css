@@ -242,6 +242,7 @@ main {
 .tl-dot:hover, .tl-dot.focus { filter: drop-shadow(0 0 8px currentColor); }
 .tl-dot.dim { opacity: 0.25; }
 .tl-label { fill: #c9cfdd; font-size: 11px; pointer-events: none; }
+.tl-label.tl-hidden { display: none; } /* crowded dots: name shows on hover and in the detail view */
 .tl-stem { stroke: #2e3546; stroke-width: 1; }
 
 .tooltip {
@@ -496,3 +497,40 @@ main {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* ---------- Top bar: officials ---------- */
+.people-bar {
+  position: sticky; top: 0; z-index: 60;
+  display: flex; align-items: center; gap: 14px;
+  padding: 10px 20px; overflow-x: auto;
+  background: rgba(10, 12, 18, 0.92); backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.people-label {
+  color: var(--muted); font-size: 0.75rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.08em; white-space: nowrap;
+}
+.people-tabs { display: flex; gap: 8px; flex-wrap: nowrap; }
+.people-tab {
+  appearance: none; font: inherit; font-size: 0.9rem; cursor: pointer; white-space: nowrap;
+  background: transparent; color: var(--muted);
+  border: 1px solid var(--line); border-radius: 999px; padding: 7px 14px;
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
+}
+.people-tab:hover { color: var(--text); border-color: var(--muted); }
+.people-tab.on { color: #0a0c12; background: var(--gold); border-color: var(--gold); font-weight: 700; }
+.people-tab:focus-visible, .people-select:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.people-select {
+  font: inherit; font-size: 0.9rem; color: var(--text);
+  background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 7px 12px;
+}
+
+/* ---------- Person panel ---------- */
+.person-panel { padding: 22px 26px; }
+.person-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
+.person-head h2 { margin: 4px 0 0; }
+.person-count { text-align: right; }
+.person-count .num { display: block; font-size: 2rem; font-weight: 800; color: var(--gold); line-height: 1; }
+.person-blurb { margin: 14px 0 8px; line-height: 1.6; max-width: 900px; }
+.person-sources { margin: 8px 0 0; padding-left: 18px; color: var(--muted); font-size: 0.85rem; line-height: 1.7; }
+.person-sources a { color: var(--sky); }
