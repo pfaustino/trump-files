@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Docket: Every Accusation Against Donald J. Trump</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="hero">
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <div class="orb orb-c"></div>
+
+    <nav class="topnav">
+      <a href="#overview">Overview</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#cases">Cases</a>
+      <a href="#pathways">Pathways</a>
+      <a href="#notes">Notes</a>
+    </nav>
+
+    <div class="hero-content">
+      <p class="eyebrow">Accountability tracker &middot; status as of <span id="asOf"></span></p>
+      <h1>The <span class="gold">Docket</span></h1>
+      <p class="lead">
+        Every impeachment, criminal case, civil suit, and ballot challenge aimed at Donald J. Trump.
+        What is alleged, where it stands, and how it could (or could not) end in a conviction.
+      </p>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="overview" class="panel">
+      <div id="stats" class="stats"></div>
+
+      <div class="overview-grid">
+        <div class="card">
+          <h2>Where things stand</h2>
+          <div class="donut-wrap">
+            <svg id="donut" viewBox="0 0 240 240" role="img" aria-label="Donut chart of matter statuses"></svg>
+            <ul id="legend" class="legend"></ul>
+          </div>
+        </div>
+        <div class="card">
+          <h2>Matters by category</h2>
+          <div id="categoryBars" class="bars"></div>
+          <p class="muted small">
+            Matters are grouped by where they were brought: Congress, federal courts, state courts, or civil courts.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline" class="panel">
+      <h2>Timeline</h2>
+      <p class="muted">Each dot is a matter. Bigger dots mean higher stakes. Click a dot for details. The shaded band is Trump’s second term.</p>
+      <div class="timeline-wrap" id="timelineWrap">
+        <svg id="timelineSvg" viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Timeline of matters"></svg>
+        <div id="tooltip" class="tooltip" role="tooltip"></div>
+      </div>
+    </section>
+
+    <section id="cases" class="panel">
+      <h2>All matters</h2>
+
+      <div class="controls">
+        <input id="search" type="search" placeholder="Search charges, cases, keywords…" aria-label="Search matters" />
+        <select id="sort" aria-label="Sort matters">
+          <option value="date">Newest first</option>
+          <option value="stakes">Highest stakes</option>
+          <option value="title">A to Z</option>
+        </select>
+      </div>
+
+      <div class="chip-row">
+        <span class="chip-label">Category</span>
+        <div id="catChips" class="chips"></div>
+      </div>
+      <div class="chip-row">
+        <span class="chip-label">Status</span>
+        <div id="statusChips" class="chips"></div>
+      </div>
+
+      <p id="resultCount" class="muted small"></p>
+      <div id="grid" class="grid"></div>
+    </section>
+
+    <section id="pathways" class="panel">
+      <h2>How a matter becomes a conviction</h2>
+      <p class="muted">Each route to accountability has its own process, standard of proof, and limits. Trump’s presidency affects some routes more than others.</p>
+      <div id="pathwayGrid" class="pathway-grid"></div>
+    </section>
+
+    <section id="notes" class="panel notes">
+      <h2>Read this first</h2>
+      <ul>
+        <li><strong>Not every item names Trump personally.</strong> Detention, deportation, shooting, and strike cards name ICE, DHS, the Pentagon, or officials. Each card says who is named.</li>
+        <li><strong>Allegations are not findings.</strong> Trump denies wrongdoing in every matter here. Only the cases marked convicted or liable reflect a legal finding, and those are still on appeal.</li>
+        <li><strong>Presumption of innocence.</strong> Criminal charges are accusations until proven beyond a reasonable doubt.</li>
+        <li><strong>Stakes ratings are editorial.</strong> They estimate how severe the consequence would be if proven, from 1 (low) to 5 (removal from office or prison).</li>
+        <li><strong>Status may lag.</strong> Statuses were checked against news and court sources on Nov 11, 2026. Confirm against the court docket before relying on any item.</li>
+        <li><strong>Not legal advice.</strong> This is an educational overview. For real decisions, talk to a licensed attorney.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">The Docket &middot; built from public court records and news reporting &middot; updated Nov 11, 2026</footer>
+
+  <dialog id="detail" class="detail"></dialog>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
