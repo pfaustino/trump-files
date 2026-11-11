@@ -674,6 +674,41 @@ window.TRUMP_DATA = {
         { label: "Reuters: ICE agent pleads not guilty (Sept 18, 2026)", url: "https://www.reuters.com/legal/government/ice-agent-pleads-not-guilty-lying-about-minneapolis-shooting-2026-09-18/" }
       ]
     },
+    {
+      id: "renee-good",
+      title: "Renee Good: family’s suits over the January 7 ICE shooting",
+      category: "immigration",
+      date: "2026-10-01",
+      dateLabel: "Oct 1, 2026",
+      track: "civil",
+      reached: 0,
+      ended: false,
+      status: "open",
+      stakes: 4,
+      summary: "On January 7, 2026, ICE officer Jonathan Ross shot and killed Renee Nicole Macklin Good, a 37-year-old mother, in her car on Portland Avenue in Minneapolis. The Hennepin County medical examiner recorded the death as a homicide from multiple gunshot wounds. On October 1, 2026, her family filed two federal civil suits. One is a wrongful-death claim against the United States. The other names Ross, Stephen Miller, Kristi Noem, Tom Homan, and other officials, and alleges they directed the Minneapolis operation that put agents on that street.",
+      charges: [
+        "Wrongful death and excessive force against the United States (civil)",
+        "Civil-rights conspiracy naming Ross, Miller, Noem, Homan, and others (civil; not a criminal charge)"
+      ],
+      current: "Both suits were filed October 1, 2026, in federal court in Minnesota. No ruling was reported as of November 11, 2026. NPR reported that no criminal charges had been filed over Good’s death.",
+      defense: [
+        "A White House spokesperson told NPR the lawsuits are “baseless” and that the administration will “vigorously defend itself.”"
+      ],
+      handling: [
+        "Civil cases in U.S. District Court for the District of Minnesota.",
+        "The conspiracy complaint is Ganger v. Ross, No. 0:26-cv-04231. Miller is sued in his individual capacity."
+      ],
+      convictionPath: [
+        "These are civil claims. A judgment would be money damages, not a criminal conviction or prison.",
+        "The family must prove the claims in court. The complaint’s account of Miller directing the operation is an allegation.",
+        "A separate criminal case would require a prosecutor to file charges. None had been filed when the suits were reported."
+      ],
+      sources: [
+        { label: "NPR: Renee Good’s family files lawsuits (Oct 2, 2026)", url: "https://www.npr.org/2026/10/02/nx-s1-5988060/renee-goods-family-files-lawsuits-over-her-death-during-minneapolis-ice-surge" },
+        { label: "Axios: family sues Trump administration and the ICE agent (Oct 1, 2026)", url: "https://www.axios.com/local/twin-cities/2026/10/01/renee-good-trump-administration-shooting-lawsuit" },
+        { label: "Complaint: Ganger v. Ross, No. 0:26-cv-04231 (filed Oct 1, 2026)", url: "https://storage.courtlistener.com/recap/gov.uscourts.mnd.236480/gov.uscourts.mnd.236480.1.0.pdf" }
+      ]
+    },
 
     /* ---------------- MILITARY / WAR ---------------- */
     {
@@ -1799,12 +1834,13 @@ window.TRUMP_DATA = {
       id: "miller",
       name: "Stephen Miller",
       role: "White House chief of staff (named Nov 2026)",
-      caseIds: ["alien-enemies", "birthright", "guard", "detention"],
-      blurb: "Named here for immigration and deployment matters. Miller has been the White House homeland security adviser and deputy chief of staff for policy, and NPR reported in 2024 that he was expected to lead writing and implementing the immigration agenda. That is his reported portfolio, not a finding that he personally directed each action in these matters. No criminal charge against Miller is listed.",
+      caseIds: ["alien-enemies", "birthright", "guard", "detention", "renee-good"],
+      blurb: "Named here for immigration and deployment matters, and as a defendant in the Renee Good family’s October 2026 civil suit. That suit alleges Miller and other officials directed the Minneapolis operation during which ICE officer Jonathan Ross shot and killed Good on January 7. The White House calls the suits baseless. Miller has been the White House homeland security adviser and deputy chief of staff for policy, and NPR reported in 2024 that he was expected to lead writing and implementing the immigration agenda. No criminal charge against Miller is listed.",
       sources: [
         { label: "White House: Trump names Stephen Miller 33rd chief of staff (Nov 2026)", url: "https://www.whitehouse.gov/releases/2026/11/president-trump-names-stephen-miller-as-33rd-white-house-chief-of-staff/" },
         { label: "NPR: Trump names immigration hardliner Stephen Miller deputy chief of staff (Nov 2024)", url: "https://www.npr.org/2024/11/11/g-s1-33741/trump-stephen-miller-deputy-chief-of-staff-immigration-policy-deportations" },
-        { label: "NBC News: Stephen Miller’s power extends far beyond immigration", url: "https://www.nbcnews.com/politics/white-house/stephen-miller-trump-white-house-immigration-woke-colleges-dc-rcna259413" }
+        { label: "NBC News: Stephen Miller’s power extends far beyond immigration", url: "https://www.nbcnews.com/politics/white-house/stephen-miller-trump-white-house-immigration-woke-colleges-dc-rcna259413" },
+        { label: "NPR: Renee Good’s family files lawsuits (Oct 2, 2026)", url: "https://www.npr.org/2026/10/02/nx-s1-5988060/renee-goods-family-files-lawsuits-over-her-death-during-minneapolis-ice-surge" }
       ]
     }
   ],

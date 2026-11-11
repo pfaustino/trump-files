@@ -44,6 +44,7 @@
     "guard": "Guard",
     "detention": "ICE deaths",
     "castro": "Minneapolis shooting",
+    "renee-good": "Renee Good suit",
     "boat-strikes": "Boat strikes",
     "iran-war": "Iran war powers",
     "iran-school": "Minab school",
