@@ -1791,18 +1791,164 @@ window.TRUMP_DATA = {
         { label: "NBC News: Key takeaways from the Epstein files", url: "https://www.nbcnews.com/politics/justice-department/epstein-files-key-takeaways-trump-musk-rcna256713" },
         { label: "Wikipedia: Epstein Files section", url: "https://en.wikipedia.org/wiki/Donald_Trump_sexual_misconduct_allegations#Epstein_Files" }
       ]
+    },
+
+    /* ---------------- BULK LITIGATION (Trump Misc. tab) ---------------- */
+    {
+      id: "misc-business",
+      title: "Business and personal lawsuits (USA Today count)",
+      category: "misc",
+      date: "2016-06-01",
+      dateLabel: "Through 2016",
+      track: "inquiry",
+      reached: 1,
+      ended: false,
+      status: "open",
+      stakes: 2,
+      summary: "USA Today counted legal actions involving Trump and his companies, not a list of criminal charges. In June 2016 it found at least 3,500 cases over three decades. By July 2016 the same review had passed 4,000. About 1,900 named Trump or his companies as the plaintiff and about 1,450 as the defendant. The rest were bankruptcies and other filings.",
+      charges: [
+        "Civil business disputes (contracts, real estate, casinos, vendors)",
+        "At least 60 lawsuits plus liens and judgments alleging unpaid bills (USA Today, June 2016)"
+      ],
+      current: "This is a historical count through 2016. USA Today said about 50 civil suits were still open that June. No later complete count of every business case was found in the sources reviewed.",
+      defense: [
+        "Trump has described many of these as ordinary business disputes.",
+        "In more than half of the 2016 count, Trump or his companies were the ones who filed suit."
+      ],
+      handling: [
+        "State and federal civil courts over three decades.",
+        "USA Today built a public database of the filings."
+      ],
+      convictionPath: [
+        "These are mostly civil cases. A civil judgment is money or an injunction, not a criminal conviction.",
+        "Each filing would have to be proved on its own facts."
+      ],
+      sources: [
+        { label: "USA Today: Trump’s 3,500 lawsuits (June 1, 2016)", url: "https://www.usatoday.com/story/news/politics/elections/2016/06/01/donald-trump-lawsuits-legal-battles/84995854/" },
+        { label: "USA Today: database surpasses 4,000 (July 7, 2016)", url: "https://www.usatoday.com/story/news/politics/onpolitics/2016/07/07/new-usa-today-interactive-database-shows-trump-lawsuits-surpass-4000/86809010/" },
+        { label: "USA Today: hundreds allege unpaid bills (June 9, 2016)", url: "https://www.usatoday.com/story/news/politics/elections/2016/06/09/donald-trump-unpaid-bills-republican-president-laswuits/85297274/" }
+      ]
+    },
+    {
+      id: "misc-admin",
+      title: "Second-term challenges to administration actions",
+      category: "misc",
+      date: "2025-01-20",
+      dateLabel: "From Jan 20, 2025",
+      track: "challenge",
+      reached: 1,
+      ended: false,
+      status: "open",
+      stakes: 4,
+      summary: "These suits challenge Trump administration policies. They usually name the United States, a department, or an official, not Trump personally. Just Security’s tracker listed 993 such cases as of November 4, 2026. The New York Times tracker, updated September 29, 2026, put the total above 900.",
+      charges: [
+        "Challenges to executive actions (immigration, tariffs, spending, and other policies)",
+        "Just Security snapshot: 378 pending, 324 counted as plaintiff wins, 167 as government wins"
+      ],
+      current: "Just Security (Nov 4, 2026): 993 cases tracked. The New York Times said courts had at least partly halted policies in more than 150 cases and had left policies in effect in more than 500 others while litigation continued.",
+      defense: [
+        "The administration defends the actions as lawful executive authority.",
+        "Just Security counts only challenges to executive actions, not suits the administration files as plaintiff."
+      ],
+      handling: [
+        "Federal district courts, then appeals. Just Security does not count an appeal as a second case.",
+        "Trackers group some mass filings (for example F-1 student-visa suits and mandatory-detention suits) as one case each."
+      ],
+      convictionPath: [
+        "These are civil challenges to policy. A win can block an order; it is not a criminal conviction of Trump.",
+        "Click the tracker links for the live docket-by-docket list. This card is a count, not 993 separate accusation cards."
+      ],
+      sources: [
+        { label: "Just Security litigation tracker (updated Nov 4, 2026; 993 cases)", url: "https://www.justsecurity.org/107087/tracker-litigation-legal-challenges-trump-administration/" },
+        { label: "NYT: tracking lawsuits against the Trump administration (updated Sept 29, 2026)", url: "https://www.nytimes.com/interactive/2026/us/trump-administration-lawsuits.html" },
+        { label: "Lawfare Litigation Tracker", url: "https://www.lawfaremedia.org/projects-series/trials-of-the-trump-administration/tracking-trump-administration-litigation" }
+      ]
+    },
+    {
+      id: "misc-tariffs",
+      title: "Tariff suits in the Court of International Trade",
+      category: "misc",
+      date: "2025-04-01",
+      dateLabel: "2025–2026",
+      track: "challenge",
+      reached: 1,
+      ended: false,
+      status: "open",
+      stakes: 3,
+      summary: "Companies filed hundreds of similar cases challenging the administration’s tariffs, often so they would have standing after a Supreme Court ruling. Court Watch stopped listing each new tariff filing at the end of 2025 for that reason. Just Security tracks 10 principal tariff cases and does not count the individual Court of International Trade filings.",
+      charges: [
+        "Challenges to tariff orders (civil; typically company plaintiffs)"
+      ],
+      current: "The individual filings are being consolidated. Just Security’s 10 principal cases are the ones it treats as the live disputes. No complete public count of every Court of International Trade tariff docket was found in the sources reviewed.",
+      defense: [
+        "The administration defends the tariffs as lawful emergency or statutory measures."
+      ],
+      handling: [
+        "Court of International Trade, with related cases in other federal courts and at the Supreme Court."
+      ],
+      convictionPath: [
+        "A ruling can uphold, narrow, or strike a tariff. It is not a criminal case against Trump."
+      ],
+      sources: [
+        { label: "Court Watch: lawsuits related to Trump admin executive orders", url: "https://www.courtwatch.news/p/lawsuits-related-to-trump-admin-executive-orders" },
+        { label: "Just Security tracker methodology (10 principal tariff cases)", url: "https://www.justsecurity.org/107087/tracker-litigation-legal-challenges-trump-administration/" }
+      ]
+    },
+    {
+      id: "misc-media",
+      title: "Media and defamation lawsuits since 2015",
+      category: "misc",
+      date: "2015-06-16",
+      dateLabel: "2015–2026",
+      track: "civil",
+      reached: 0,
+      ended: false,
+      status: "open",
+      stakes: 2,
+      summary: "Axios counted 61 media and defamation cases involving Trump, his businesses, or his administration since 2015, including cases he filed and cases filed against him. Sixteen were in 2025 and nine in 2026 as of August 18, 2026. That is a surge compared with 36 cases in the decade from 2015 through 2024.",
+      charges: [
+        "Defamation and other media-related civil claims (filed by or against Trump, his companies, or officials)"
+      ],
+      current: "Axios’ count as of August 18, 2026, is 61 cases since 2015. Some are open; some are closed. Carroll’s two verdicts are tracked separately on the main Trump tab.",
+      defense: [
+        "Trump has called many press accounts false and has used defamation suits and countersuits in response."
+      ],
+      handling: [
+        "State and federal civil courts. Axios expanded its 2025 count to include administration officials and non-media defamation parties."
+      ],
+      convictionPath: [
+        "Defamation is a civil claim. A loss can mean damages, not prison.",
+        "The Carroll judgments are the main completed media-related verdicts already on the main tab."
+      ],
+      sources: [
+        { label: "Axios: Trump media and defamation lawsuits surge (Aug 18, 2026)", url: "https://www.axios.com/2026/08/18/trump-media-defamation-lawsuits" }
+      ]
     }
   ],
 
-  /* caseIds: null means all matters. Links reflect documented roles or reported portfolios, not findings of personal wrongdoing. */
+  /* caseIds: null means all matters except category "misc". Links reflect documented roles or reported portfolios, not findings of personal wrongdoing. */
   people: [
     {
       id: "trump",
       name: "Donald J. Trump",
       role: "President (second term)",
       caseIds: null,
-      blurb: "Every matter in this docket names Trump, directly or through the cases against him. Trump denies wrongdoing in all of them.",
+      blurb: "Named criminal cases, impeachments, civil verdicts, and public accusations against Trump. Bulk lawsuit counts (thousands of business filings and hundreds of second-term policy suits) are on the Trump Misc. tab.",
       sources: []
+    },
+    {
+      id: "trump-misc",
+      name: "Trump Misc.",
+      role: "Bulk litigation trackers",
+      caseIds: ["misc-business", "misc-admin", "misc-tariffs", "misc-media"],
+      blurb: "These are counts, not 4,000 separate accusation cards. USA Today found 3,500 to 4,000 legal actions involving Trump and his companies through 2016. Trackers of second-term policy challenges put that wave above 900 cases, with hundreds more nearly identical tariff filings. Most name the United States or an agency, not Trump personally. A tracker win can block a policy; it is not a criminal conviction.",
+      note: "Open a card for the method behind each number, then use the tracker link for the live list.",
+      sources: [
+        { label: "USA Today: 3,500 lawsuits (June 1, 2016)", url: "https://www.usatoday.com/story/news/politics/elections/2016/06/01/donald-trump-lawsuits-legal-battles/84995854/" },
+        { label: "Just Security litigation tracker (993 cases as of Nov 4, 2026)", url: "https://www.justsecurity.org/107087/tracker-litigation-legal-challenges-trump-administration/" },
+        { label: "NYT administration lawsuit tracker (updated Sept 29, 2026)", url: "https://www.nytimes.com/interactive/2026/us/trump-administration-lawsuits.html" },
+        { label: "Axios: media and defamation count (Aug 18, 2026)", url: "https://www.axios.com/2026/08/18/trump-media-defamation-lawsuits" }
+      ]
     },
     {
       id: "hegseth",

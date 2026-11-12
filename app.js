@@ -10,7 +10,8 @@
     civil:          { label: "Civil", color: "#06b6d4" },
     immigration:    { label: "Immigration & rights", color: "#f472b6" },
     military:       { label: "Military & war", color: "#84cc16" },
-    allegations:    { label: "Allegations", color: "#fb7185" }
+    allegations:    { label: "Allegations", color: "#fb7185" },
+    misc:           { label: "Bulk lawsuits", color: "#94a3b8" }
   };
 
   var STATUSES = {
@@ -78,10 +79,14 @@
     "acc-laaksonen": "Ninni Laaksonen",
     "acc-searles": "Cassandra Searles",
     "acc-miss-teen-usa": "Miss Teen USA rooms",
-    "epstein-files": "Epstein files"
+    "epstein-files": "Epstein files",
+    "misc-business": "Business lawsuits",
+    "misc-admin": "Admin challenges",
+    "misc-tariffs": "Tariff suits",
+    "misc-media": "Media / defamation"
   };
 
-  var ORDER_CATS = ["constitutional", "federal", "state", "civil", "immigration", "military", "allegations"];
+  var ORDER_CATS = ["constitutional", "federal", "state", "civil", "immigration", "military", "allegations", "misc"];
   var state = { cat: "all", status: "all", q: "", sort: "date", person: "trump" };
 
   function esc(s) {
@@ -90,8 +95,8 @@
     });
   }
   function $(id) { return document.getElementById(id); }
-  function countStatus(k) { return D.cases.filter(function (c) { return c.status === k; }).length; }
-  function countCat(k) { return D.cases.filter(function (c) { return c.category === k; }).length; }
+  function countStatus(k) { return scopedCases().filter(function (c) { return c.status === k; }).length; }
+  function countCat(k) { return scopedCases().filter(function (c) { return c.category === k; }).length; }
   function byId(id) { return D.cases.find(function (c) { return c.id === id; }); }
 
   function animateCount(el, to) {
@@ -106,7 +111,7 @@
 
   /* ---------- STATS ---------- */
   function renderStats() {
-    var items = [{ label: "Matters tracked", value: D.cases.length, color: "#f5c542" }];
+    var items = [{ label: "Matters tracked", value: scopedCases().length, color: "#f5c542" }];
     Object.keys(STATUSES).forEach(function (k) {
       var n = countStatus(k);
       if (n) items.push({ label: STATUSES[k].label, value: n, color: STATUSES[k].color });
@@ -124,7 +129,7 @@
   /* ---------- DONUT ---------- */
   function renderDonut() {
     var svg = $("donut");
-    var cx = 120, cy = 120, r = 88, C = 2 * Math.PI * r, total = D.cases.length;
+    var cx = 120, cy = 120, r = 88, C = 2 * Math.PI * r, total = scopedCases().length || 1;
     var keys = Object.keys(STATUSES).filter(function (k) { return countStatus(k) > 0; });
     var offset = 0, segs = "";
     keys.forEach(function (k) {
@@ -138,7 +143,7 @@
     svg.innerHTML =
       '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="none" stroke="#1d2230" stroke-width="28"/>' +
       segs +
-      '<text x="' + cx + '" y="' + (cy + 2) + '" text-anchor="middle" class="donut-center-num">' + total + '</text>' +
+      '<text x="' + cx + '" y="' + (cy + 2) + '" text-anchor="middle" class="donut-center-num">' + scopedCases().length + '</text>' +
       '<text x="' + cx + '" y="' + (cy + 24) + '" text-anchor="middle" class="donut-center-lbl">matters</text>';
 
     setTimeout(function () {
@@ -155,8 +160,9 @@
 
   /* ---------- CATEGORY BARS ---------- */
   function renderCategoryBars() {
-    var max = Math.max.apply(null, ORDER_CATS.map(countCat));
-    $("categoryBars").innerHTML = ORDER_CATS.map(function (c) {
+    var cats = ORDER_CATS.filter(function (c) { return countCat(c) > 0; });
+    var max = Math.max.apply(null, cats.map(countCat).concat([1]));
+    $("categoryBars").innerHTML = cats.map(function (c) {
       var n = countCat(c);
       return '<div class="bar-row" data-cat="' + c + '" style="--c:' + CATEGORIES[c].color + '">' +
         '<div class="bar-top"><span>' + esc(CATEGORIES[c].label) + '</span><strong>' + n + '</strong></div>' +
@@ -187,8 +193,14 @@
     var W = 1000, padL = 170, padR = 30;
     var t0 = Date.parse("1980-01-01"), t1 = Date.parse("2027-12-31");
     function X(d) { return padL + (Date.parse(d) - t0) / (t1 - t0) * (W - padL - padR); }
-    var lanes = { constitutional: 100, federal: 200, state: 300, civil: 400, immigration: 500, military: 600, allegations: 700 };
-    var AXIS_Y = 800;
+    var present = {};
+    scopedCases().forEach(function (c) { present[c.category] = true; });
+    var cats = ORDER_CATS.filter(function (c) { return present[c]; });
+    if (!cats.length) cats = ORDER_CATS.slice();
+    var lanes = {};
+    cats.forEach(function (c, i) { lanes[c] = 100 + i * 100; });
+    var AXIS_Y = 100 + cats.length * 100 + 40;
+    svg.setAttribute("viewBox", "0 0 1000 " + (AXIS_Y + 30));
 
     var s = "";
     s += '<rect x="' + (X("2025-01-20")) + '" y="22" width="' + (W - padR - X("2025-01-20")) + '" height="' + (AXIS_Y - 22) + '" class="era-band"/>';
@@ -200,7 +212,7 @@
       s += '<text x="' + x + '" y="' + (AXIS_Y + 16) + '" text-anchor="middle" class="year-label">' + y + '</text>';
     }
 
-    ORDER_CATS.forEach(function (c, i) {
+    cats.forEach(function (c, i) {
       var yy = lanes[c];
       if (i % 2 === 0) s += '<rect x="0" y="' + (yy - 50) + '" width="' + W + '" height="100" class="lane-band"/>';
       s += '<line x1="' + padL + '" x2="' + (W - padR) + '" y1="' + yy + '" y2="' + yy + '" stroke="#222838"/>';
@@ -275,15 +287,17 @@
 
   /* ---------- FILTER CHIPS ---------- */
   function renderChips() {
-    var cats = [{ key: "all", label: "All", n: D.cases.length, color: "#f5c542" }].concat(
-      ORDER_CATS.map(function (c) { return { key: c, label: CATEGORIES[c].label, n: countCat(c), color: CATEGORIES[c].color }; })
+    var cats = [{ key: "all", label: "All", n: scopedCases().length, color: "#f5c542" }].concat(
+      ORDER_CATS.filter(function (c) { return countCat(c) > 0; }).map(function (c) {
+        return { key: c, label: CATEGORIES[c].label, n: countCat(c), color: CATEGORIES[c].color };
+      })
     );
     $("catChips").innerHTML = cats.map(function (x) {
       return '<button class="chip' + (state.cat === x.key ? " active" : "") + '" data-type="cat" data-val="' + x.key + '" style="--c:' + x.color + '">' +
         '<span class="dot"></span>' + esc(x.label) + ' <span>(' + x.n + ')</span></button>';
     }).join("");
 
-    var stats = [{ key: "all", label: "All", n: D.cases.length, color: "#f5c542" }].concat(
+    var stats = [{ key: "all", label: "All", n: scopedCases().length, color: "#f5c542" }].concat(
       Object.keys(STATUSES).filter(function (k) { return countStatus(k) > 0; }).map(function (k) {
         return { key: k, label: STATUSES[k].label, n: countStatus(k), color: STATUSES[k].color };
       })
@@ -314,7 +328,7 @@
 
   function scopedCases() {
     var p = activePerson();
-    if (!p.caseIds) return D.cases;
+    if (!p.caseIds) return D.cases.filter(function (c) { return c.category !== "misc"; });
     return D.cases.filter(function (c) { return p.caseIds.indexOf(c.id) !== -1; });
   }
 
@@ -351,7 +365,13 @@
   function setPerson(id) {
     if (state.person === id) return;
     state.person = id;
+    state.cat = "all";
+    state.status = "all";
     renderPeople();
+    renderStats();
+    renderDonut();
+    renderCategoryBars();
+    renderChips();
     renderTimeline();
     renderGrid();
   }
